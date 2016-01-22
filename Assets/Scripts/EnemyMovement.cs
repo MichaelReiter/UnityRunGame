@@ -7,16 +7,17 @@ public class EnemyMovement : MonoBehaviour {
 
 
 	NavMeshAgent nav;
+	Rigidbody rb;
 
 	void Awake() {
 		player = GameObject.FindGameObjectWithTag("Player").transform;
 
 
 		nav = GetComponent<NavMeshAgent>();
+		rb = GetComponent<Rigidbody>();
 	}
 	
 	void Update() {
 		nav.SetDestination(player.position);
-		GetComponent<Rigidbody>().position.y = 0;
 	}
 }
