@@ -36,6 +36,8 @@ public class EnemyHealth : MonoBehaviour {
 		// Allow shots to pass through
 		capsuleCollider.isTrigger = true;
 		anim.SetTrigger("isDead");
-
+		GetComponent<NavMeshAgent>().enabled = false;
+		GetComponent<Rigidbody>().isKinematic = true;
+		Object.Destroy(gameObject, 2f);
 	}
 }
