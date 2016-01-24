@@ -9,14 +9,12 @@ public class EnemyAttack : MonoBehaviour {
 	private Animator anim;
 	private GameObject player;
 	private PlayerHealth playerHealth;
-	private EnemyHealth enemyHealth;
 	private bool playerInRange;
-	private float timer;
+	private float attackTimer;
 
 	void Awake() {
 		player = GameObject.FindGameObjectWithTag("Player");
 		playerHealth = player.GetComponent<PlayerHealth>();
-		enemyHealth = GetComponent<EnemyHealth>();
 		anim = GetComponent<Animator>();
 	}
 
@@ -33,9 +31,9 @@ public class EnemyAttack : MonoBehaviour {
 	}
 
 	void Update() {
-		timer += Time.deltaTime;
+		attackTimer += Time.deltaTime;
 
-		if (timer >= cooldown && playerInRange && enemyHealth.currentHealth > 0) {
+		if (attackTimer >= cooldown && playerInRange) {
 			Attack();
 		}
 
@@ -45,7 +43,7 @@ public class EnemyAttack : MonoBehaviour {
 	}
 
 	void Attack() {
-		timer = 0f;
+		attackTimer = 0f;
 
 		if (playerHealth.currentHealth > 0) {
 			anim.SetTrigger("isAttacking");
