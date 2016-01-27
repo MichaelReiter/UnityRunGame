@@ -10,12 +10,12 @@ public class ScoreManager : MonoBehaviour {
 
 	void Awake() {
 		scoreText = GetComponent<Text>();
+		scoreText.enabled = false;
 		score = 0;
 	}
 
 	void Update () {
 		score += Time.deltaTime;
 		scoreText.text = "" + (int)score * scoreModifier;
-
 	}
 }
