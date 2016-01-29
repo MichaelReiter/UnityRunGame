@@ -16,18 +16,8 @@ public class PlayerHealth : MonoBehaviour {
 		currentHealth = startingHealth;
 	}
 
-	public void TakeDamage(int amount) {
-		damaged = true;
-		currentHealth -= amount;
-		Debug.Log("hit");
-		damaged = false;
-		if (currentHealth <= 0 && !isDead) {
-			Death();
-		}
-	}
-
-	void Death() {
+	public void Death() {
 		isDead = true;
-		anim.SetTrigger("isDead");
+		Application.LoadLevel(Application.loadedLevel);
 	}
 }

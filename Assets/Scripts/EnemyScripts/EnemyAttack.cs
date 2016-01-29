@@ -47,7 +47,11 @@ public class EnemyAttack : MonoBehaviour {
 
 		if (playerHealth.currentHealth > 0) {
 			anim.SetTrigger("isAttacking");
-			playerHealth.TakeDamage(attackDamage);
+			Invoke("KillPlayer", 1f);
 		}
+	}
+
+	void KillPlayer() {
+		playerHealth.Death();
 	}
 }
