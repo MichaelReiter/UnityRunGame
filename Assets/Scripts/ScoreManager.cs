@@ -15,7 +15,9 @@ public class ScoreManager : MonoBehaviour {
 	}
 
 	void Update () {
-		score += Time.deltaTime;
-		scoreText.text = "" + (int)score * scoreModifier;
+		if (!GameObject.FindWithTag("UI").GetComponent<StartOptions>().inMainMenu) {
+			score += Time.deltaTime;
+			scoreText.text = "" + (int)score * scoreModifier;
+		}
 	}
 }

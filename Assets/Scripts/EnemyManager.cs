@@ -13,6 +13,7 @@ public class EnemyManager : MonoBehaviour {
 	public SpawnPoint[] spawnPoints;
 
 	private int spawnCounter;
+	//private bool inMenu;
 
 	void Start () {
 		spawnCounter = 0;
@@ -20,7 +21,9 @@ public class EnemyManager : MonoBehaviour {
 	}
 
 	void SpawnEnemy() {
-		spawnCounter++;
-		Instantiate(enemy, spawnPoints[spawnCounter % spawnPoints.Length].point.position, spawnPoints[spawnCounter % spawnPoints.Length].point.rotation);
+		if (!GameObject.FindWithTag("UI").GetComponent<StartOptions>().inMainMenu) {
+			spawnCounter++;
+			Instantiate(enemy, spawnPoints[spawnCounter % spawnPoints.Length].point.position, spawnPoints[spawnCounter % spawnPoints.Length].point.rotation);
+		}
 	}
 }

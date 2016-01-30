@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
 
@@ -18,6 +19,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	public void Death() {
 		isDead = true;
-		Application.LoadLevel(Application.loadedLevel);
+		 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		//Application.LoadLevel(Application.loadedLevel);
 	}
 }
