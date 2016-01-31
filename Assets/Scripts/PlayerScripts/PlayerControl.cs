@@ -71,9 +71,9 @@ public class PlayerControl : MonoBehaviour
 	void Update()
 	{
 		// fly
-		if(Input.GetButtonDown ("Fly"))
-			fly = !fly;
-		aim = Input.GetButton("Aim");
+		//if(Input.GetButtonDown ("Fly"))
+		//	fly = !fly;
+		//aim = Input.GetButton("Aim");
 		h = Input.GetAxis("Horizontal");
 		v = Input.GetAxis("Vertical");
 		run = Input.GetButton ("Run");
@@ -97,7 +97,7 @@ public class PlayerControl : MonoBehaviour
 		else
 		{
 			MovementManagement (h, v, run, sprint);
-			JumpManagement ();
+			//JumpManagement ();
 		}
 	}
 

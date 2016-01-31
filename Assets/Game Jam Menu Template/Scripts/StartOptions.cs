@@ -75,7 +75,7 @@ public class StartOptions : MonoBehaviour {
 		showPanels.HideMenu ();
 
 		//Load the selected scene, by scene index number in build settings
-		Application.LoadLevel (sceneToStart);
+		Application.LoadLevel(sceneToStart);
 	}
 
 
