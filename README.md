@@ -5,3 +5,5 @@ A 3D endless survival game developed using C# and the Unity3D game engine.
 - Use WASD to move, and mouse to look around
 - Run from the faceless for as long as you can
 - Game over if they catch you
+
+![Screenshot](/Screenshots/run.jpg)
