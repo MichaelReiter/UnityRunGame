@@ -19,7 +19,10 @@ public class PlayerHealth : MonoBehaviour {
 
 	public void Death() {
 		isDead = true;
-		 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		GameObject.FindWithTag("UI").GetComponent<AudioSource>().Stop();
+		Destroy(GameObject.FindWithTag("UI"));
+		//GameObject.FindWithTag("UI").GetComponent<StartOptions>().inMainMenu = true;
 		//Application.LoadLevel(Application.loadedLevel);
 	}
 }
