@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyAttack : MonoBehaviour {
 
-	public float cooldown = 0.5f;
+	//public float cooldown = 0.5f;
 	public int attackDamage = 10;
 
 	private Animator anim;
@@ -33,7 +33,7 @@ public class EnemyAttack : MonoBehaviour {
 	void Update() {
 		attackTimer += Time.deltaTime;
 
-		if (attackTimer >= cooldown && playerInRange) {
+		if (/*attackTimer >= cooldown && */playerInRange) {
 			Attack();
 		}
 
