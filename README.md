@@ -1,4 +1,4 @@
-# Run Run Run
+# Suburb Survival
 A 3D endless survival game developed using C# and the Unity3D game engine.
 
 - Play as nameless, faceless man desperately trying to survive in a world where noone stands out
