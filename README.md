@@ -11,7 +11,7 @@ Built with C# and Unity3D.
 - Run from the faceless for as long as you can
 - It's game over if you are caught
 
-## Screenshots
+## Screenshot
 
 ![Screenshot](/Screenshots/run.jpg)
 
